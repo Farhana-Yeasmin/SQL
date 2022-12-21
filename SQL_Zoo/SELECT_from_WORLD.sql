@@ -21,6 +21,8 @@ SELECT name, population, area FROM world WHERE area > 3000000 OR population > 25
 
 --8. Show the countries that are big by area or big by population but not both. Show name, population and area.
 SELECT name, population, area FROM world WHERE (area > 3000000 AND population < 250000000) OR (area < 3000000 AND population > 250000000)
+Another Solution:
+SELECT name, population, area FROM world WHERE population > 250000000 XOR area > 3000000
 
 --9. For South America show population in millions and GDP in billions to 2 decimal places.
 
