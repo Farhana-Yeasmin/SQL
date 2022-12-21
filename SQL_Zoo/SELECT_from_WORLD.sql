@@ -16,5 +16,17 @@ SELECT name, population FROM world WHERE name IN ('France', 'Germany', 'Italy')
 --6. Show the countries which have a name that includes the word 'United'
 SELECT name FROM world WHERE name LIKE '%United%'
 
---7. 
+--7. Show the countries that are big by area or big by population. Show name, population and area.
+SELECT name, population, area FROM world WHERE area > 3000000 OR population > 250000000
 
+--8. Show the countries that are big by area or big by population but not both. Show name, population and area.
+SELECT name, population, area FROM world WHERE (area > 3000000 AND population < 250000000) OR (area < 3000000 AND population > 250000000)
+
+--9. For South America show population in millions and GDP in billions to 2 decimal places.
+
+SELECT name, ROUND(population/1000000, 2), ROUND(gdp/1000000000, 2) FROM world WHERE continent = 'South America';
+
+--10. Show the name and capital where the name and the capital have the same number of characters.
+SELECT name, capital FROM world WHERE LENGTH(name) = LENGTH(capital)
+
+--11. 
