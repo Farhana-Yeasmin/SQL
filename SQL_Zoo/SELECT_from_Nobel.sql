@@ -1,6 +1,4 @@
--- TABLE: nobel(yr, subject, winner)
-
-
+-- TABLE: nobel(yr, subject, winner)--
 
 --1. Change the query shown so that it displays Nobel prizes for 1950.
 
